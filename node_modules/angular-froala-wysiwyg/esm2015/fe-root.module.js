@@ -1,0 +1,18 @@
+import { NgModule } from '@angular/core';
+import { FroalaEditorModule } from './editor/editor.module';
+import { FroalaViewModule } from './view/view.module';
+export class FERootModule {
+}
+FERootModule.decorators = [
+    { type: NgModule, args: [{
+                imports: [
+                    FroalaEditorModule.forRoot(),
+                    FroalaViewModule.forRoot()
+                ],
+                exports: [
+                    FroalaEditorModule,
+                    FroalaViewModule
+                ]
+            },] }
+];
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiZmUtcm9vdC5tb2R1bGUuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi9wcm9qZWN0cy9saWJyYXJ5L3NyYy9mZS1yb290Lm1vZHVsZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxPQUFPLEVBQUUsUUFBUSxFQUFFLE1BQU0sZUFBZSxDQUFDO0FBQ3pDLE9BQU8sRUFBRSxrQkFBa0IsRUFBRSxNQUFNLHdCQUF3QixDQUFDO0FBQzVELE9BQU8sRUFBRSxnQkFBZ0IsRUFBRSxNQUFNLG9CQUFvQixDQUFDO0FBWXRELE1BQU0sT0FBTyxZQUFZOzs7WUFWeEIsUUFBUSxTQUFDO2dCQUNSLE9BQU8sRUFBRTtvQkFDUCxrQkFBa0IsQ0FBQyxPQUFPLEVBQUU7b0JBQzVCLGdCQUFnQixDQUFDLE9BQU8sRUFBRTtpQkFDM0I7Z0JBQ0QsT0FBTyxFQUFFO29CQUNQLGtCQUFrQjtvQkFDbEIsZ0JBQWdCO2lCQUNqQjthQUNGIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgTmdNb2R1bGUgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcclxuaW1wb3J0IHsgRnJvYWxhRWRpdG9yTW9kdWxlIH0gZnJvbSAnLi9lZGl0b3IvZWRpdG9yLm1vZHVsZSc7XHJcbmltcG9ydCB7IEZyb2FsYVZpZXdNb2R1bGUgfSBmcm9tICcuL3ZpZXcvdmlldy5tb2R1bGUnO1xyXG5cclxuQE5nTW9kdWxlKHtcclxuICBpbXBvcnRzOiBbXHJcbiAgICBGcm9hbGFFZGl0b3JNb2R1bGUuZm9yUm9vdCgpLFxyXG4gICAgRnJvYWxhVmlld01vZHVsZS5mb3JSb290KClcclxuICBdLFxyXG4gIGV4cG9ydHM6IFtcclxuICAgIEZyb2FsYUVkaXRvck1vZHVsZSxcclxuICAgIEZyb2FsYVZpZXdNb2R1bGVcclxuICBdXHJcbn0pXHJcbmV4cG9ydCBjbGFzcyBGRVJvb3RNb2R1bGUge1xyXG5cclxufVxyXG4iXX0=

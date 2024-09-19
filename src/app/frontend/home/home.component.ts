@@ -10,6 +10,8 @@ import { AppService } from '~/services/app.service';
 import { MenuService } from '~/services/modules/menu.service';
 import { SlideService } from '~/services/home/slide.service';
 import { ToslugService } from '~/services/integrated/toslug.service';
+import { ElementRef, ViewChild, AfterViewInit } from '@angular/core';
+
 
 @Component({
     selector: 'app-home',
@@ -18,6 +20,7 @@ import { ToslugService } from '~/services/integrated/toslug.service';
     providers: [ToslugService]
 })
 export class HomeComponent implements OnInit, OnDestroy {
+    
     public width: number;
     VIEWPORT_MOBILE = VIEWPORT.MOBILE;
     VIEWPORT_DESKTOP = VIEWPORT.DESKTOP;

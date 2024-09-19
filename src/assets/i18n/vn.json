@@ -163,7 +163,8 @@
         "category":"Danh mục",
         "others": "Khác",
         "news": "Tin tức",
-        "hotnews": "Tin mới nhất dành cho bạn"
+        "hotnews": "Tin mới nhất dành cho bạn",
+        "infoCompany":"Giới thiệu về công ty"
     },
     "FELibrary": {},
     "FEHeader": {

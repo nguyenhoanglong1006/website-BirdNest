@@ -1,4 +1,4 @@
-<div id="header" class="box-header header-top" style="background-color: var(--color-primary);"
+<div id="header " class="box-header header-top text-gray-700" style="background-color: var(--color-primary);"
     [ngStyle]="{ 'box-shadow': screenHome ? '' : '0px 2px 8px rgb(9 30 66 / 10%)' }">
     <div class="container-main">
         <div class="container-fluid">
@@ -11,16 +11,19 @@
                                 <span><a *ngIf="
                                     ('FEMail' | translate) != 'FEMail' &&
                                     ('FEMail' | translate) != ''  " href="mailto:{{ 'FEMail' | translate }}">
-                                        <i class="fas fa-envelope mr-1"></i> <span>{{ 'lblEmail' | translate }}:</span>
-                                        {{ 'FEMail' | translate }}
+                                        <i class="fas fa-envelope mr-1 text-gray-700"></i>
+                                        <span class="text-gray-700">{{ 'lblEmail' | translate }}: {{ 'FEMail' |
+                                            translate }}</span>
+
                                     </a>
                                 </span>
-                                <span>
+                                <span class="">
                                     <a class="d-table-row" *ngIf="
                                         ('FEHotline' | translate) != 'FEHotline' &&
                                         ('FEHotline' | translate) != ''" href="tel:{{ 'FEHotline' | translate }}">
-                                        <i class="fas fa-phone mr-1"></i>
-                                        <span>{{ 'lblHotline' | translate }}:</span> {{ 'FEHotline' | translate }}
+                                        <i class="fas fa-phone mr-1 text-gray-700"></i>
+                                        <span class="text-gray-700">{{ 'lblHotline' | translate }}:{{ 'FEHotline' |
+                                            translate }}</span>
                                     </a>
                                 </span>
                             </div>
@@ -37,17 +40,16 @@
                                             alt="facebook" />
                                     </a>
 
-                                    <a class="mr-3" target="_blank" [href]="'FEHrefTwitter' | translate"
+                                    <!-- <a class="mr-3" target="_blank" [href]="'FEHrefTwitter' | translate"
                                         *ngIf="('FEHrefTwitter' | translate) != 'FEHrefTwitter'"
                                         rel="noopener noreferrer">
                                         <img src="/assets/img/icon/twitter.svg" width="16px" height="14px"
                                             alt="twitter" />
-                                    </a>
-                                    <!-- <a class="mr-3" target="_blank" [href]="'FEHrefZalo' | translate"
-                                        *ngIf="('FEHrefZalo' | translate) != 'FEHrefZalo'"
-                                        rel="noopener noreferrer">
-                                        <img src="/assets/img/icon/in.svg" width="16px" height="16px" alt="linkedin" />
                                     </a> -->
+                                    <a class="mr-3" target="_blank" [href]="'FEHrefZalo' | translate"
+                                        *ngIf="('FEHrefZalo' | translate) != 'FEHrefZalo'" rel="noopener noreferrer">
+                                        <img src="/assets/img/icon/in.svg" width="16px" height="16px" alt="linkedin" />
+                                    </a>
                                     <a target="_blank" [href]="'FEHrefYoutube' | translate"
                                         *ngIf="('FEHrefYoutube' | translate) != 'FEHrefYoutube'"
                                         rel="noopener noreferrer">
@@ -57,131 +59,90 @@
                                 </div>
 
                             </div>
-                            <div class="dropdown" *ngIf="!user.name">
-                                <div class="dropdown-btn" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false">
-                                    <span class="font-weight-500"> {{ 'FEHeader.account' | translate }}</span> <i
-                                        class="fas fa-angle-down"></i>
-                                </div>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" [routerLink]="['/dang-nhap']">{{ 'FEBtn.login' | translate
-                                        }}</a>
-                                    <a class="dropdown-item" [routerLink]="['/dang-ky']">{{ 'FEHeader.openAccount' |
-                                        translate }}</a>
-                                </div>
-                            </div>
-                            <div class="dropdown" *ngIf="user.name">
-                                <div class="dropdown-btn" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false">
-                                    {{user.name}} <i class="fas fa-angle-down"></i>
-                                </div>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" [routerLink]="['khach-hang/thong-tin/']">
-                                        Thông tin khách hàng</a>
-                                    <a class="dropdown-item" [routerLink]="['khach-hang/danh-sach/']">Danh sách đơn
-                                        hàng</a>
-                                    <a class="dropdown-item" [routerLink]="['khach-hang/mat-khau/']">Đổi mật khẩu</a>
-                                    <a class="dropdown-item" (click)="globals.CUSTOMERS.remove()" href="">Đăng xuất</a>
-                                </div>
-                            </div>
-                            <div id="cart" class="cart position-relative">
-                                <a [routerLink]="'/gio-hang'" class="align-items-center d-flex ml-2">
-                                    <span class="cart-icon position-relative ">
-                                        <i class="fas fa-shopping-cart mx-2"></i>
-                                        <span
-                                            class="badge badge-danger position-absolute rounded-circle font-weight-normal">
-                                            {{apiCart.amount()}}
-                                        </span>
-                                    </span>
-                                </a>
-                                <div class="notification position-absolute p-3 bg-white" id="notification">
-                                    <div class="btn-close" (click)="cart.close()">
-                                        <i class="fas fa-times"></i>
-                                    </div>
-                                    <p class="status d-flex align-items-center m-0">
-                                        <i class="fas fa-check-circle text-success mr-2"></i>
-                                        {{'FEProductsDetail.notification' | translate}}
-                                    </p>
-                                    <a class="btn btn-viewCart mt-2 py-2 " (click)="cart.router()">
-                                        {{'FEProductsDetail.viewCart' | translate}}
-                                    </a>
-                                </div>
-                            </div>
+
+
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Primary header -->
-            <div class=" d-md-flex justify-content-between align-items-center py-2 d-none container">
+            <div class=" d-md-flex justify-content-between align-items-center py-2 d-none w-full">
                 <!-- Logo -->
                 <div class="d-flex justify-content-center col-md-2">
-                    <a   style=" width: 118px;" [routerLink]="'/' + (this.globals.language._language == 'vn' ? '' : 'en')"
+                    <a style=" width: 118px;" [routerLink]="'/' + (this.globals.language._language == 'vn' ? '' : 'en')"
                         (click)="width < 600 ? menuMobile.onMenu(true) : ''" class="logo-header">
                         <img *ngIf="globals.company && globals.company.logo" [src]="globals.company.logo"
-                            [alt]="globals.company.name" class="img-fluid w-full h-full"/>
+                            [alt]="globals.company.name" class="img-fluid w-full h-full" />
                     </a>
                 </div>
 
                 <!-- Menu -->
-                <div class="d-flex justify-content-end align-items-center col-md-10 ">
+                <div class="d-flex justify-content-start  col-md-8 flex-column">
                     <!-- Menu desktop -->
-                    <div *ngIf="width > 992" class="d-none d-lg-block">
-                        <app-menu></app-menu>
-                    </div>
-                    <div class="productCategory">
-                        <div class="d-flex position-relative">
-                            <input type="text" class="form-control" [(ngModel)]="search.value" id="search"
-                                (keyup.enter)="search.onSearch()" placeholder="Tìm kiếm sản phẩm">
-                            <i class="fas fa-search" (click)="search.onSearch()"
-                                style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%);opacity: 0.8;"></i>
+                    <div class="row mt-3">
+                        <div class="productCategory col-md-12">
+                            <div class="d-flex position-relative">
+                                <input type="text" class="custom-input" [(ngModel)]="search.value" id="search"
+                                    (keyup.enter)="search.onSearch()" placeholder="Tìm kiếm sản phẩm">
+                                <i class="fas fa-search" (click)="search.onSearch()"
+                                    style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%);opacity: 0.8;"></i>
+                            </div>
                         </div>
                     </div>
-                    <div class="d-flex align-items-center">
-                        <!-- Language -->
-                        <!-- <div class="language d-flex align-self-center mt-lg-n1">
-                            <div class="dropdown-toggle d-flex align-items-center cursor-pointer" id="language"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img [src]="mutiLang.active.icon" alt="icon" width="16" height="auto"
-                                    class="language__icon" />
-                                <span class="language__title font-weight-500" style="margin: 0 2px 0 4px;">
-                                    {{ mutiLang.active.code }}
+
+                    <div *ngIf="width > 992" class=" d-none d-lg-block mt-1 col-md-10 align-items-center"
+                        style="margin-left: -15px;">
+                        <app-menu></app-menu>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-end col-md-2  ">
+                    <div id="cart" class="cart position-relative mr-3">
+                        <a [routerLink]="'/gio-hang'" class="align-items-center d-flex ml-2">
+                            <span class="cart-icon position-relative ">
+                                <i class="fas fa-shopping-cart mx-2 " style="font-size: 2rem;color:  #323333"></i>
+                                <span class="badge badge-danger position-absolute rounded-circle font-weight-normal">
+                                    {{apiCart.amount()}}
                                 </span>
-                                <span class="caret"></span>
+                            </span>
+                        </a>
+                        <div class="notification position-absolute p-3 bg-white" id="notification">
+                            <div class="btn-close" (click)="cart.close()">
+                                <i class="fas fa-times"></i>
                             </div>
-                            <div class="dropdown-menu overflow-hidden p-0 mt-2 ml-n3" style="min-width: unset"
-                                aria-labelledby="language">
-                                <li role="menuitem" *ngFor="let item of mutiLang.data">
-                                    <a class="text-decoration-none">
-                                        <div class="dropdown-item d-flex align-items-center cursor-pointer"
-                                            (click)="onLanguage(item.code, item.id)">
-                                            <img class="lazyload mr-2" data-src="{{ item.icon }}" alt="language"
-                                                width="16" height="12" title="icon" />
-                                            <span style="font-size: 13px">{{ item.code }}</span>
-                                        </div>
-                                    </a>
-                                </li>
-                            </div>
-                        </div> -->
-
-                        <!-- Search -->
-                        <!-- <button
-                            class="align-items-center justify-content-center d-flex btn p-0 border-0 ml-4 ml-lg-3 mt-lg-n2 h-100 "
-                            (click)="openModalSearch(template); focusSearch()">
-                            <img src="/assets/img/icon/search.svg" class="p-md-1" alt="search" width="16" height="auto"
-                                class="pt-0 pt-md-2" />
-                        </button> -->
-
-                        <!-- Cart -->
-
-                        <!-- Hamburger menu mobile -->
-                        <div *ngIf="width <= 992" class="d-flex align-items-center justify-content-end">
-                            <button class="btn bg-transparent nav-open-btn px-0 ml-4" style="width: 18px;">
-                                <img *ngIf="menuMobile.show" src="/assets/img/icon/menu.svg" width="18px" height="16px"
-                                    alt="menu" (click)="menuMobile.onMenu(false)" />
-                                <img *ngIf="menuMobile.show == false" src="/assets/img/icon/close-header.svg" width="15"
-                                    height="15" alt="close" (click)="menuMobile.onMenu(true)" />
-                            </button>
+                            <p class="status d-flex align-items-center m-0">
+                                <i class="fas fa-check-circle text-success mr-2"></i>
+                                {{'FEProductsDetail.notification' | translate}}
+                            </p>
+                            <a class="btn btn-viewCart mt-2 py-2 " (click)="cart.router()">
+                                {{'FEProductsDetail.viewCart' | translate}}
+                            </a>
+                        </div>
+                    </div>
+                    <div class="dropdown" *ngIf="!user.name">
+                        <div class="dropdown-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa fa-user-circle mx-2 mt-1 " aria-hidden="true"
+                                style="font-size: 2rem; color:  #323333;"></i>
+                        </div>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" [routerLink]="['/dang-nhap']">{{ 'FEBtn.login' | translate
+                                }}</a>
+                            <a class="dropdown-item" [routerLink]="['/dang-ky']">{{ 'FEHeader.openAccount' |
+                                translate }}</a>
+                        </div>
+                    </div>
+                    <div class="dropdown" *ngIf="user.name">
+                        <div class="dropdown-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{user.name}} <i class="fas fa-angle-down"></i>
+                        </div>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" [routerLink]="['khach-hang/thong-tin/']">
+                                Thông tin khách hàng</a>
+                            <a class="dropdown-item" [routerLink]="['khach-hang/danh-sach/']">Danh sách đơn
+                                hàng</a>
+                            <a class="dropdown-item" [routerLink]="['khach-hang/mat-khau/']">Đổi mật khẩu</a>
+                            <a class="dropdown-item" (click)="globals.CUSTOMERS.remove()" href="">Đăng xuất</a>
                         </div>
                     </div>
                 </div>
@@ -191,7 +152,7 @@
 </div>
 
 <!-- Menu mobile -->
-<div id="menu-mobi" class="menu-mobi menu-mobi-hidden w-100 " style="background-color: #BA897B;">
+<div id="menu-mobi" class="menu-mobi menu-mobi-hidden w-100 " style="background-color: var(--color-primary);">
     <div class="container-main" style="border-bottom: 3px solid var(--color-primary);">
         <div class="container-fluid">
             <div class="row align-items-center py-lg-3 py-1">
@@ -208,32 +169,25 @@
                     <div class="d-flex align-items-center justify-content-end ">
                         <a [routerLink]="'/gio-hang'" class="mr-2" (click)="menuMobile.onMenu(true)">
                             <span class="cart-icon position-relative">
-                                <i class="fas fa-shopping-cart mx-2"></i>
+                                <i class="fas fa-shopping-cart mx-2" style="font-size: 20px;"></i>
                                 <span class="badge badge-danger position-absolute rounded-circle font-weight-normal">
                                     {{apiCart.amount()}}
                                 </span>
                             </span>
                         </a>
 
-                        <div class="align-items-center justify-content-between d-flex mx-3"
-                            style="color:  var(--color-primary);">
+                        <div class="align-items-center justify-content-between d-flex mx-3">
                             <div class="align-items-center d-flex">
-                                <div class="mr-1" style="font-size: 20px;color:  var(--color-secondary);">
-                                    <i class="fas fa-user-circle" [routerLink]="'/dang-nhap'"></i>
-                                </div>
-                                <small style="color:  var(--color-secondary);font-size: 12px;"
-                                    *ngIf="globals.CUSTOMERS.check() == false">Đăng nhập/Đăng ký</small>
-                                <div *ngIf="globals.CUSTOMERS.check() == true" class="overflow-hidden"
-                                    style="line-height: 1; width:100px;text-overflow: ellipsis; ">
-                                    <small class="m-0 text-nowrap" [routerLink]="['khach-hang/thong-tin/']">{{
-                                        'lblHelloUser' | translate }}
-                                        <span class="font-weight-bold" [routerLink]="['khach-hang/thong-tin/']">{{
-                                            globals.CUSTOMERS.get().name }}</span>
-                                    </small>
-                                    <div>
-                                        <small class="text-nowrap" style="font-size: 9px;" (click)="logout()">
-                                            {{ 'FEBtn.logout' | translate }}
-                                        </small>
+
+                                <small *ngIf="globals.CUSTOMERS.check() == false"> <i class="fas fa-user-circle"
+                                        [routerLink]="'/dang-nhap'" style="font-size: 22px;"></i>
+                                </small>
+                                <div *ngIf="globals.CUSTOMERS.check() == true">
+                                    <div class="">
+                                        <span class="font-weight-bold text-black"
+                                            [routerLink]="['khach-hang/thong-tin/']"> <i class="fas fa-user-circle"
+                                                [routerLink]="'khach-hang/thong-tin/'" style="font-size: 22px;"></i>
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -269,7 +223,8 @@
                     </button> -->
                     <div class="mr-3" *ngFor="let item of category.data">
                         <div class="rounded text-center h-100" [routerLink]="['/san-pham/'+item.link]">
-                            <div class="text-nowrap" style="font-size: 13px; font-weight: 600"> {{ item.name }} </div>
+                            <div class="text-nowrap text-gray-700" style="font-size: 13px; font-weight: 600"> {{
+                                item.name }} </div>
                         </div>
                     </div>
                     <!-- <button class="d-inline-flex align-items-center btn py-1 px-1 mb-0">

@@ -46,6 +46,8 @@ export class MenuComponent implements OnInit {
         this.menuService.getMenu({ position: 'menuMain' }).subscribe((resp: any) => {
             if (resp.status == 1) {
                 let data = this.compaid(resp.data);
+                console.log(data);
+                
                 this.menu = data;
             }
         })

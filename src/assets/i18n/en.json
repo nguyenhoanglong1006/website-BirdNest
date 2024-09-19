@@ -73,7 +73,9 @@
     },
     "FEHome": {
         "onTrading": "Online Trading",
-        "hotNews": "Hot news"
+        "hotNews": "Hot news",
+        "infoCompany":"Introducing the company"
+
     },
     "FELibrary": {},
     "FEHeader": {

@@ -17,15 +17,17 @@ section {
 }
 
 .bg-primary {
-    background-color: #ff0000 !important;
+    background-color: #F266AB !important;
 }
-
+.bg-blue {
+    background-color: #76e8f3 !important;
+}
 .color-primary {
-    color: #ff0000;
+    color: #F266AB;
 }
 
 .border-primary {
-    border-color: #ff0000 !important;
+    border-color: #F266AB !important;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -55,7 +57,6 @@ section {
 
 .nav-link {
     display: block;
-    padding: 0.5rem 1rem;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -169,7 +170,7 @@ button.bg-light:hover {
     z-index: 1;
     border-radius: 8px;
     padding: 12px 30px;
-    background: #ff0000;
+    background: #F266AB;
     letter-spacing: 0.05em;
     border-radius: 0px;
     transition: all 0.3s ease;
@@ -235,3 +236,5 @@ button.bg-light:hover {
     -o-animation: my 700ms infinite;
     animation: my 700ms infinite;
 }
+
+

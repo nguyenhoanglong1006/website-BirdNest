@@ -3,8 +3,8 @@
         <ul class="navbar-nav align-items-center w-100" *ngIf="menu && menu.length > 0">
             <ng-template #recursiveMenu let-menu>
                 <li *ngFor="let item of menu; let i = index"
-                    class="d-flex h-100 nav-item align-items-center w-100" [ngClass]="'item-children-' + item.level"
-                    [class.py-3]="item.level == 1">
+                    class="d-flex pt-1  nav-item align-items-center w-100" [ngClass]="'item-children-' + item.level"
+                    [class.py-0]="item.level == 1">
                     <a class="nav-link pl-0 w-100 cursor-pointer d-flex align-items-center justify-content-between"
                         [ngClass]="[ active == item.link ? 
                         'is-active':'', 'level-' + item.level, item.level == 1 ? 'py-1 pr-0 mr-3 font-weight-500' : '']"

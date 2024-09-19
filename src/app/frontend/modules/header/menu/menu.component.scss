@@ -1,24 +1,25 @@
 .is-active {
-    color: var(--color-secondary) !important;
+    color: var(--color-blue) !important;
 }
 
 ul li {
     position: relative;
     padding: 0;
     z-index: 2;
+    color: #323333;
 }
 
 ul li:hover a.level-1 {
     text-decoration: none;
     cursor: pointer;
-    color: var(--color-secondary) !important;
+    color: var(--color-blue) !important;
 }
 
 ul li a.level-1 {
     font-weight: 500;
     font-size: 16px;
     position: relative;
-    color: #011801;
+
     font-weight: 600;
     &::after {
         content: "";
@@ -72,7 +73,7 @@ ul li div.dropdown-menu-item li.item-children-2 div.dropdown-menu-item li:hover 
 ul li div.dropdown-menu-item li.item-children-2 div.dropdown-menu-item li div.dropdown-menu-item li:hover a.level-4 {
     text-decoration: none;
     cursor: pointer;
-    color: var(--color-secondary) !important;
+    background-color: var(--color-secondary) !important;
 }
 
 ul li a.level-2 span,

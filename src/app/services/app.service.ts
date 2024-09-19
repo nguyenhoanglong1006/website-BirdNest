@@ -103,7 +103,7 @@ export class AppService {
                         "@type": "WebPage",
                         "@id": data.og_url || this._document.querySelector("meta[data-url-path]").getAttribute('data-url-path'),
                     },
-                    "headline": data.name || 'Công Ty Cổ Phần Chứng Khoán Quốc Gia - NSI',
+                    "headline": data.name || '',
 
                     "image": {
                         "@type": "ImageObject",

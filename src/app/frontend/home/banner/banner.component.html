@@ -1,11 +1,95 @@
-<section class="  position-relative">
-    <div class="d-flex" *ngFor="let item of slider">
-        <div class="col-md-6">
+<section class="about position-relative">
+    <div class="row d-flex flex-column flex-md-row " *ngFor="let item of slider">
+        <div class="col-12 col-md-6">
             <a [href]="[slider[0].link]" target="_blank">
-                <img class="img-fluid banner" [src]="item.images" loading="lazy" />
+                <img class="img-fluid banner w-100" [src]="item.images" loading="lazy" />
             </a>
         </div>
+        <div class="col-md-6 mt-6 gap-4">
+            <div class="introduce d-flex justify-content-center text-uppercase ">
+                <h3 class=" d-flex justify-content-center">
+                    {{'FEHome.infoCompany' | translate}}
+                </h3>
+            </div>
+            <div class="title mt-3 pb-4">
+                {{ 'FEDescription' | translate }}
+            </div>
+            <div class="position-relative px-md-4 mt-4">
+                <div class="row justify-content-center px-2">
+                    <div class="col-12 col-md-12 px-2 ">
+                        <figure class="about-item my-md-3 mx-auto rounded-pill  p-2">
+                            <a class="text-decoration-none d-flex flex-column justify-content-center text-center h-100"
+                                href="/en/link-to-item-1">
+                                <div style="width: 64px;" class="mx-auto">
+                                    <img width="100%" height="100%" src="path_to_image_1.jpg" alt="Item 1" />
+                                </div>
+                                <figcaption class="font-weight-bold text-body">Không chất bảo quản</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="col-4 col-md-4 px-2">
+                        <figure class="about-item my-md-3 mx-auto rounded-pill  p-2">
+                            <a class="text-decoration-none d-flex flex-column justify-content-center text-center h-100"
+                                href="/en/link-to-item-2">
+                                <div style="width: 64px;" class="mx-auto">
+                                    <img width="100%" height="100%" src="path_to_image_2.jpg" alt="Item 2" />
+                                </div>
+                                <figcaption class="font-weight-bold text-body">Nguồn gốc rõ ràng</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="col-4 col-md-4 px-2">
+                        <figure class="about-item my-md-3 mx-auto rounded-pill  p-2">
+                            <a class="text-decoration-none d-flex flex-column justify-content-center text-center h-100"
+                                href="/en/link-to-item-3">
+                                <div style="width: 64px;" class="mx-auto">
+                                    <img width="100%" height="100%" src="path_to_image_3.jpg" alt="Item 3" />
+                                </div>
+                                <figcaption class="font-weight-bold text-body">OCEANNEST</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="col-4 col-md-4 px-2">
+                        <figure class="about-item my-md-3 mx-auto rounded-pill  p-2">
+                            <a class="text-decoration-none d-flex flex-column justify-content-center text-center h-100"
+                                href="/en/link-to-item-4">
+                                <div style="width: 64px;" class="mx-auto">
+                                    <img width="100%" height="100%" src="path_to_image_4.jpg" alt="Item 4" />
+                                </div>
+                                <figcaption class="font-weight-bold text-body">Kiểm định nghiêm ngặt</figcaption>
+                            </a>
+                        </figure>
+                    </div>
 
-        <h1>{{item.description}}</h1>
+                    <div class="col-4 col-md-4 px-2">
+                        <figure class="about-item my-md-3 mx-auto rounded-pill  p-2">
+                            <a class="text-decoration-none d-flex flex-column justify-content-center text-center h-100"
+                                href="/en/link-to-item-4">
+                                <div style="width: 64px;" class="mx-auto">
+                                    <img width="100%" height="100%" src="path_to_image_4.jpg" alt="Item 4" />
+                                </div>
+                                <figcaption class="font-weight-bold text-body">Đảm bảo chất lượng</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+                    <div class="col-4 col-md-4 px-2">
+                        <figure class="about-item my-md-3 mx-auto rounded-pill  p-2">
+                            <a class="text-decoration-none d-flex flex-column justify-content-center text-center h-100"
+                                href="/en/link-to-item-4">
+                                <div style="width: 64px;" class="mx-auto">
+                                    <img width="100%" height="100%" src="path_to_image_4.jpg" alt="Item 4" />
+                                </div>
+                                <figcaption class="font-weight-bold text-body">Item 4</figcaption>
+                            </a>
+                        </figure>
+                    </div>
+
+                </div>
+                <div class="about-animate position-absolute fixed-top d-none d-md-block">
+                    <img src="../../../../assets/icons/bg-trong-dong.png" class="img-fluid" alt="About">
+                </div>
+            </div>
+        </div>
+
     </div>
 </section>

@@ -6,14 +6,17 @@
 ::after,
 ::before {
     --font-primary: Roboto;
-    --color-primary: #fbbe7b;
-    --color-secondary: #016f1b;
+    --color-primary: #ffc436;
+    --color-secondary: #1eaee2ee;
+    --text-gray-700: #323333;
+    --color-blue: #2177d2;
     --font-secondary: Merriweather;
     --color-text: #4d5156;
     --bg-section: #f5f6fa;
     --gradient-primary: linear-gradient(to left, rgb(255 102 50 / 20%) 0%, var(--color-secondary) 100%);
     --border-color-primary: rgba(229, 231, 235, 1);
     --wrapper: 1920px;
+    --color-print: #f40c80 !important;
 }
 *,
 *::after,
@@ -32,7 +35,6 @@ body {
     height: 6px;
     .productCategory & {
         height: 0px;
-        
     }
 }
 ::-webkit-scrollbar-thumb {
@@ -73,7 +75,7 @@ a:focus {
 }
 #page-detail {
     overflow: hidden !important;
-    *:not(img, iframe, [class^="fa"]) {
+    *:not(img, iframe, [class^='fa']) {
         font-family: var(--font-primary) !important;
     }
     img,

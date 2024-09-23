@@ -87,7 +87,7 @@
         "address": "Trụ sở chính"
     },
     "FEProduct": {
-        "category": "Danh mục",
+        "category": "Danh mục sản phẩm",
         "product": "Sản phẩm",
         "count":"{{ count }} sản phẩm",
         "all": "Tất cả danh mục",
@@ -160,7 +160,7 @@
         "featured": "Sản phẩm nổi bật",
         "hot": "Sản phẩm bán chạy",
         "more": "Xem thêm",
-        "category":"Danh mục",
+        "category":"Danh mục sản phẩm",
         "others": "Khác",
         "news": "Tin tức",
         "hotnews": "Tin mới nhất dành cho bạn",

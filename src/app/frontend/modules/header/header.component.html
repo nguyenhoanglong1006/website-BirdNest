@@ -1,9 +1,10 @@
-<div id="header " class="box-header header-top text-gray-700" style="background-color: var(--color-primary);"
+<div id="header " class="box-header header-top text-gray-700 navbar-fixed" style="background-color: #ffffff;"
     [ngStyle]="{ 'box-shadow': screenHome ? '' : '0px 2px 8px rgb(9 30 66 / 10%)' }">
-    <div class="container-main">
-        <div class="container-fluid">
-            <!-- Sub header -->
-            <div class="border-bottom d-none d-md-block">
+
+    <!-- Sub header -->
+    <div class="border-bottom d-none d-md-block " style="background-color: var(--color-primary);">
+        <div class="container-main">
+            <div class="container-fluid">
                 <div class="row ">
                     <div class="col-md-7">
                         <div class="d-flex align-items-center justify-content-between py-1">
@@ -65,8 +66,12 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
 
-            <!-- Primary header -->
+    <!-- Primary header -->
+    <div class="container-main">
+        <div class="container-fluid">
             <div class=" d-md-flex justify-content-between align-items-center py-2 d-none w-full">
                 <!-- Logo -->
                 <div class="d-flex justify-content-center col-md-2">
@@ -82,8 +87,8 @@
                     <!-- Menu desktop -->
                     <div class="row mt-3">
                         <div class="productCategory col-md-12">
-                            <div class="d-flex position-relative">
-                                <input type="text" class="custom-input" [(ngModel)]="search.value" id="search"
+                            <div class="d-flex position-relative ">
+                                <input type="text" class="custom-input border" style="background-color: #ededed;" [(ngModel)]="search.value" id="search"
                                     (keyup.enter)="search.onSearch()" placeholder="Tìm kiếm sản phẩm">
                                 <i class="fas fa-search" (click)="search.onSearch()"
                                     style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%);opacity: 0.8;"></i>

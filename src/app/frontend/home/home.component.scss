@@ -1,4 +1,4 @@
-@import "src/styles/mixins";
+@import 'src/styles/mixins';
 
 section {
     &.section--bg {
@@ -17,17 +17,17 @@ section {
 }
 
 .bg-primary {
-    background-color: #F266AB !important;
+    background-color: #fa81be !important;
 }
 .bg-blue {
     background-color: #76e8f3 !important;
 }
 .color-primary {
-    color: #F266AB;
+    color: #f266ab;
 }
 
 .border-primary {
-    border-color: #F266AB !important;
+    border-color: #f266ab !important;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -145,13 +145,13 @@ button.bg-light:hover {
 }
 
 .about-us::before {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background: url("../../../assets/img/bg-about.png") center center repeat;
+    background: url('../../../assets/img/bg-about.png') center center repeat;
     opacity: 0.7;
 }
 
@@ -170,7 +170,7 @@ button.bg-light:hover {
     z-index: 1;
     border-radius: 8px;
     padding: 12px 30px;
-    background: #F266AB;
+    background: #f266ab;
     letter-spacing: 0.05em;
     border-radius: 0px;
     transition: all 0.3s ease;
@@ -231,10 +231,34 @@ button.bg-light:hover {
     }
 }
 .nhapnhay {
-    -webkit-animation: my 700ms infinite;
-    -moz-animation: my 700ms infinite;
-    -o-animation: my 700ms infinite;
-    animation: my 700ms infinite;
+    -webkit-animation: my 900ms infinite;
+    -moz-animation: my 900ms infinite;
+    -o-animation: my 900ms infinite;
+    animation: my 900ms infinite;
 }
-
-
+.title-text {
+    font-family: 'Dancing Script', cursive; /* Sử dụng một font có dạng chữ thảo */
+    font-size: 34px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.company {
+    height: 300px;
+    border-radius: 35% 65% 14% 86% / 59% 41% 59% 41% ;
+    background-color: #76e8f3;
+  
+}
+.category{
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 3px;
+    height: 140px;
+    width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5ead4;
+    box-shadow: #b3a892;
+    border-color: #f5ead4;
+}

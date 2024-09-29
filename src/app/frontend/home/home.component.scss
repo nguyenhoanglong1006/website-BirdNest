@@ -94,7 +94,15 @@ button.bg-light:hover {
     height: 80px;
     border-bottom: 4px solid #18244e;
 }
-
+.about-us{
+   height: 200px;
+}
+.about-us .img-fluid{
+    position: relative;
+    height: 300px;
+    top: -200px;
+    z-index: 1;
+ }
 // About us
 .truncate-about {
     display: -webkit-box;
@@ -118,10 +126,6 @@ button.bg-light:hover {
     bottom: 0;
 }
 
-.about-us .bottom-dots {
-    left: 25px;
-}
-
 .dot {
     position: relative;
     display: block;
@@ -136,32 +140,6 @@ button.bg-light:hover {
 .line-dot {
     border-right: 40px solid;
     border-right-color: #ff0000;
-}
-
-.about-us {
-    background-color: #f0f3fb;
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-
-.about-us::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: url('../../../assets/img/bg-about.png') center center repeat;
-    opacity: 0.7;
-}
-
-.about-images {
-    max-width: 500px;
-    overflow: hidden;
-}
-
-.about-images > img {
-    transform: translateZ(0);
 }
 
 .view-more {
@@ -244,11 +222,10 @@ button.bg-light:hover {
 }
 .company {
     height: 300px;
-    border-radius: 35% 65% 14% 86% / 59% 41% 59% 41% ;
+    border-radius: 35% 65% 14% 86% / 59% 41% 59% 41%;
     background-color: #76e8f3;
-  
 }
-.category{
+.category {
     font-size: 30px;
     font-weight: bold;
     border-radius: 5px;

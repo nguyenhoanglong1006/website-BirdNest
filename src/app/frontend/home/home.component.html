@@ -1,45 +1,86 @@
-<div class="bg-light">
-    <div class="row ">
-      
-            <app-slide class="py-1 d-block"></app-slide>
-    </div>
-</div>
-
-<div class="container-main py-2" style="background-color: rgb(255, 245, 232);">
-    <div class="container-fluid">
-        <div class="  row align-items-center">
-            <!-- <div class="company col-12  col-md-4 d-flex flex-column justify-content-center align-items-center">
-                        <h2> {{ 'FECompanyName' | translate }}
-                        </h2>
-                        <div class="d-flex justify-content-center align-items-center ml-2">
-                            {{ 'FEDescription' | translate }}
+<div class="bg-light " style="z-index: 10;">
+    <div class="container-main">
+        <div class="container-fluid">
+            <div class="row px-2">
+                <div class="col-md-3 px-2">
+                    <div class="d-none d-md-block py-1 position-relative h-100" data-aos="fade-right">
+                        <div class="bg-primary p-2 text-white"><i class="fas fa-list mr-2"></i>
+                            <span style="font-weight: 600;">{{'FEHome.category' | translate}}</span>
                         </div>
-                    </div> -->
+                        <div class="productCategory">
+                            <div class="overflow-auto" style="height: 300px;">
+                                <ul class="list-group position-relative">
+                                    <li class="list-group-item p-1" dropdown triggers="hover" #dp="bs-dropdown"
+                                        *ngFor="let item of category.data" style="font-weight: 600;">
+                                        <a dropdownToggle routerLinkActive="active" class="ml-2 nav-link text-dark p-0">
+                                            <div class="d-flex  gap-3 align-items-center justify-content-between "
+                                                (mouseleave)="dp.hide()">
+                                                <div class="category-box" [routerLink]="['/san-pham/'+item.link]">
+                                                    <img class="mr-2 rounded" width="40px" height="40px"
+                                                        [defaultImage]="('FEIIconGroupproduct' | translate)"
+                                                        [lazyLoad]="item.icon" [title]="item.name" [alt]="item.name">
+                                                    <span>{{item.name}}</span>
+                                                </div>
+                                                <i class="fas fa-angle-right color-primary"
+                                                    *ngIf="item.data.length > 0"></i>
+                                            </div>
+                                        </a>
 
-            <div class="productCategory h-auto col-12  col-md-12  mt-4 pb-4">
-                <h3 class="d-flex justify-content-center ">{{'FEProduct.category' | translate}}</h3>
-                <div class=" flex-wrap  d-flex justify-content-between">
-                    <div class=" category " dropdown triggers="hover" #dp="bs-dropdown"
-                        *ngFor="let item of category.data" style="font-weight: 600;">
-                        <a dropdownToggle routerLinkActive="active" class="ml-2 nav-link text-dark p-0">
-                            <div class="d-flex flex-column  gap-3 align-items-center justify-content-center "
-                                (mouseleave)="dp.hide()">
-                                <div class="category-box" [routerLink]="['/san-pham/'+item.link]">
-                                    <img class="mr-2 rounded " width="100px" height="100px"
-                                        [defaultImage]="('FEIIconGroupproduct' | translate)" [lazyLoad]="item.icon"
-                                        [title]="item.name" [alt]="item.name">
-                                </div>
-                                <span class="mt-1">{{item.name}}</span>
-                                <i class="fas fa-angle-right color-primary" *ngIf="item.data.length > 0"></i>
+                                    </li>
+                                </ul>
+                             
                             </div>
-                        </a>
+                            <ul class="list-group position-relative border" style="height: 140px;">
+                                <div class="bg-primary p-2 text-white">
+                                    LIÊN HỆ VỚI SỐ HOTLINE ĐỂ NHẬN GIÁ TỐT NHẤT </div>
+                                    <div class="">vsdvs</div>
+                            </ul>
+                        </div>
                     </div>
+                </div>
+                <div class="col-md-9 p-0">
+                    <app-slide class="py-1 d-block" data-aos="fade-left"></app-slide>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
+<!-- <div class="bg-white">
+    <div class=" container-main py-2">
+        <div class="container-fluid">
+            <div class="  row align-items-center">
+                <div class="productCategory h-auto col-12  col-md-12  mt-4 pb-4">
+                    <h3 class="d-flex justify-content-center " data-aos="fade-right"
+                        data-aos-anchor-placement="top-bottom">
+                        {{'FEProduct.category' | translate}}</h3>
+                    <div class=" flex-wrap  d-flex justify-content-between">
+                        <div class=" category " dropdown triggers="hover" #dp="bs-dropdown"
+                            *ngFor="let item of category.data" style="font-weight: 600;">
+                            <a dropdownToggle routerLinkActive="active" class="ml-2 nav-link text-dark p-0"
+                                data-aos="zoom-in-down">
+                                <div class="d-flex flex-column  gap-3 align-items-center justify-content-center "
+                                    (mouseleave)="dp.hide()">
+                                    <div class="category-box" [routerLink]="['/san-pham/'+item.link]">
+                                        <img class="mr-2 rounded " width="100px" height="100px"
+                                            [defaultImage]="('FEIIconGroupproduct' | translate)" [lazyLoad]="item.icon"
+                                            [title]="item.name" [alt]="item.name">
+                                    </div>
+                                    <span class="mt-1">{{item.name}}</span>
+                                    <i class="fas fa-angle-right color-primary" *ngIf="item.data.length > 0"></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<div class="about-us bg-white">
+    <div class="about-animate   d-none d-md-block">
+        <img src="../../../../assets/icons/bg-trong-dong.png" class="img-fluid" alt="About">
+    </div>
+</div>
 
 <!-- Danh sách sản phẩm -->
 <div class="bg-white space">
@@ -47,7 +88,7 @@
         <div class="container-fluid">
             <div class="py-2">
                 <div class="border-bottom border-primary  mb-3 d-flex align-items-center justify-content-center">
-                    <h5 class="  title-text d-inline-flex text-nowrap p-2 mb-0 rounded-top ">
+                    <h5 class="  title-text d-inline-flex text-nowrap p-2 mb-0 rounded-top " data-aos="fade-right">
                         {{'FEHome.featured' | translate}}
                     </h5>
 
@@ -102,46 +143,6 @@
         </div>
     </div>
 </div>
-
-<div class="place about-us position-relative" *ngIf="aboutUs.data.name && aboutUs.data.name.length > 0">
-    <div class="container-main">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-8">
-                    <div class="title position-relative pb-4">
-                        <h2 class="font-weight-bold">{{ aboutUs.data.name }}</h2>
-                        <div>{{ aboutUs.data.title }}</div>
-                        <div class="bottom-dots">
-                            <span class="dot line-dot"></span>
-                            <span class="dot"></span>
-                            <span class="dot"></span>
-                            <span class="dot"></span>
-                        </div>
-                    </div>
-                    <div [innerHTML]="aboutUs.data.detail | sanitizeHtml" class="truncate-about"></div>
-                    <div class="pt-3 d-md-none">
-                        <img [defaultImage]="aboutUs.data.image" style="max-width: 100%;"
-                            [lazyLoad]="aboutUs.data.image" [title]="aboutUs.data.name" [alt]="aboutUs.data.name">
-                    </div>
-                    <a [routerLink]="[ '/' + aboutUs.data.link ]">
-                        <div
-                            class="view-more mt-md-5 mt-4 text-white d-inline-block text-uppercase position-relative font-weight-bold">
-                            {{ 'FEHome.more' | translate }}
-                            <i class="fas fa-angle-double-right"></i>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4 pl-md-0 d-none d-md-block">
-                    <div class="about-images float-right">
-                        <img class="img-fluid" [defaultImage]="aboutUs.data.image" [lazyLoad]="aboutUs.data.image"
-                            [title]="aboutUs.data.name" [alt]="aboutUs.data.name">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
 
 <!-- Tin tức -->
 <div class="bg-white space">

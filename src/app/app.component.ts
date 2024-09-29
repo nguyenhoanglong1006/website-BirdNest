@@ -5,6 +5,7 @@ import { Globals } from './globals';
 import { AppService } from './services/app.service';
 import { Router } from '@angular/router';
 import { isPlatformBrowser } from '@angular/common';
+import * as AOS from 'aos';
 
 @Component({
     selector: 'app-root',
@@ -38,6 +39,8 @@ export class AppComponent implements OnInit {
     }
 
     ngOnInit() {
+  
+
         if (this.isBrowser) {
             this.getCompany();
             let is_admin = (window.location.pathname.split('/')[1] == 'admin' || window.location.pathname.split('/')[1] == 'login') ? true : false;

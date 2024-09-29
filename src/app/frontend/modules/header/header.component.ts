@@ -17,6 +17,7 @@ import { HomeService } from '~/services/home/home.service';
     providers: [ToslugService],
 })
 export class HeaderComponent implements OnInit {
+    
     public company: any = {};
 
     public hovermenu: boolean = true;

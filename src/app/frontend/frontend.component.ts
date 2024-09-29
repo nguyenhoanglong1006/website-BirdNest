@@ -6,6 +6,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { Globals } from '~/globals';
 import { AppService } from '~/services/app.service';
 import { FrontendService } from '~/services/frontend/frontend.service';
+import * as AOS from 'aos';
 
 @Component({
     selector: 'app-frontend',
@@ -46,6 +47,8 @@ export class FrontendComponent implements OnInit, OnDestroy {
     }
 
     ngOnInit() {
+   
+
         this.appService.setScript();
         if (this.isBrowser) {
             this.width = window.innerWidth;

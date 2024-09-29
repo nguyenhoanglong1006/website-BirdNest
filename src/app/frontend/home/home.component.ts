@@ -10,9 +10,7 @@ import { AppService } from '~/services/app.service';
 import { MenuService } from '~/services/modules/menu.service';
 import { SlideService } from '~/services/home/slide.service';
 import { ToslugService } from '~/services/integrated/toslug.service';
-import { ElementRef, ViewChild, AfterViewInit } from '@angular/core';
-
-
+import * as AOS from 'aos';
 @Component({
     selector: 'app-home',
     templateUrl: './home.component.html',
@@ -58,7 +56,12 @@ export class HomeComponent implements OnInit, OnDestroy {
             this.banner.get();
             this.aboutUs.get()
         }
-    }
+        AOS.init({
+            delay: 200, // độ trễ (ms) trước khi bắt đầu animation
+            duration: 1200, // thời gian thực hiện animation
+            once: true, // animation chỉ chạy một lần khi cuộn tới (set false để chạy lại khi cuộn ngược lại)
+            offset: 100 // khoảng cách từ phần tử so với đỉnh của trang trước khi animation bắt đầu
+          });    }
 
     ngOnDestroy() {
     }

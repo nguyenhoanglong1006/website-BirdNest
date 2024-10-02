@@ -1,51 +1,74 @@
-<div class="bg-light " style="z-index: 10;">
-    <div class="container-main">
-        <div class="container-fluid">
-            <div class="row px-2">
-                <div class="col-md-3 px-2">
-                    <div class="d-none d-md-block py-1 position-relative h-100" data-aos="fade-right">
-                        <div class="bg-primary p-2 text-white"><i class="fas fa-list mr-2"></i>
-                            <span style="font-weight: 600;">{{'FEHome.category' | translate}}</span>
-                        </div>
-                        <div class="productCategory">
-                            <div class="overflow-auto" style="height: 300px;">
-                                <ul class="list-group position-relative">
-                                    <li class="list-group-item p-1" dropdown triggers="hover" #dp="bs-dropdown"
-                                        *ngFor="let item of category.data" style="font-weight: 600;">
-                                        <a dropdownToggle routerLinkActive="active" class="ml-2 nav-link text-dark p-0">
-                                            <div class="d-flex  gap-3 align-items-center justify-content-between "
-                                                (mouseleave)="dp.hide()">
-                                                <div class="category-box" [routerLink]="['/san-pham/'+item.link]">
-                                                    <img class="mr-2 rounded" width="40px" height="40px"
-                                                        [defaultImage]="('FEIIconGroupproduct' | translate)"
-                                                        [lazyLoad]="item.icon" [title]="item.name" [alt]="item.name">
-                                                    <span>{{item.name}}</span>
-                                                </div>
-                                                <i class="fas fa-angle-right color-primary"
-                                                    *ngIf="item.data.length > 0"></i>
-                                            </div>
-                                        </a>
-
-                                    </li>
-                                </ul>
-                             
+<div class="bg-white">
+    <div class="bg-white ">
+        <div class="container-main">
+            <div class="container-fluid">
+                <div class="row px-2">
+                    <div class="col-md-3 px-2  flex-column">
+                        <div class="d-none d-md-block py-1 position-relative" data-aos="fade-right">
+                            <div class="title-category bg-primary p-2 text-white"><i class="fas fa-list mr-2"></i>
+                                <span style="font-weight: 600;">{{'FEHome.category' | translate}}</span>
                             </div>
-                            <ul class="list-group position-relative border" style="height: 140px;">
-                                <div class="bg-primary p-2 text-white">
-                                    LIÊN HỆ VỚI SỐ HOTLINE ĐỂ NHẬN GIÁ TỐT NHẤT </div>
-                                    <div class="">vsdvs</div>
-                            </ul>
+                            <div class="productCategory">
+                                <div class="overflow-auto">
+                                    <ul class="list-group position-relative">
+                                        <li class="list-group-item p-1" dropdown triggers="hover" #dp="bs-dropdown"
+                                            *ngFor="let item of category.data" style="font-weight: 600;">
+                                            <a dropdownToggle routerLinkActive="active"
+                                                class="ml-2 nav-link text-dark p-0">
+                                                <div class="d-flex  gap-3 align-items-center justify-content-between "
+                                                    (mouseleave)="dp.hide()">
+                                                    <div class="category-box" [routerLink]="['/san-pham/'+item.link]">
+                                                        <img class="mr-2 rounded" width="40px" height="40px"
+                                                            [defaultImage]="('FEIIconGroupproduct' | translate)"
+                                                            [lazyLoad]="item.icon" [title]="item.name"
+                                                            [alt]="item.name">
+                                                        <span>{{item.name}}</span>
+                                                    </div>
+                                                    <i class="fas fa-angle-right color-primary"
+                                                        *ngIf="item.data.length > 0"></i>
+                                                </div>
+                                            </a>
+
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="d-none d-md-block " data-aos="fade-right" style="height: 180px;">
+                            <div class="title-category bg-primary p-2 text-white">
+                                LIÊN HỆ VỚI SỐ HOTLINE ĐỂ NHẬN GIÁ TỐT NHẤT </div>
+                            <div class="content-category d-flex justify-content-center align-items-center border p-2">
+
+                                <div class="wrapper" style="margin-left: -10px;">
+                                    <div class="ring">
+                                        <div class="coccoc-alo-phone coccoc-alo-green coccoc-alo-show">
+                                            <div class="coccoc-alo-ph-circle"></div>
+                                            <div class="coccoc-alo-ph-circle-fill"></div>
+                                            <div class="coccoc-alo-ph-img-circle">
+                                                <i class="fas fa-phone"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center flex-column mr-3 ">
+                                    <h4 class="nhapnhay">{{ 'lblHotline' | translate }}</h4>
+                                    <h3> {{ 'FEHotline' | translate }}
+                                    </h3>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-9 p-0">
-                    <app-slide class="py-1 d-block" data-aos="fade-left"></app-slide>
+                    <div class="col-md-9 p-0">
+                        <app-slide class="py-1 d-block" data-aos="fade-left"></app-slide>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- <div class="bg-white">
+    <!-- <div class="bg-white">
     <div class=" container-main py-2">
         <div class="container-fluid">
             <div class="  row align-items-center">
@@ -76,97 +99,228 @@
         </div>
     </div>
 </div> -->
-<div class="about-us bg-white">
-    <div class="about-animate   d-none d-md-block">
-        <img src="../../../../assets/icons/bg-trong-dong.png" class="img-fluid" alt="About">
-    </div>
-</div>
 
-<!-- Danh sách sản phẩm -->
-<div class="bg-white space">
-    <div class="container-main">
-        <div class="container-fluid">
-            <div class="py-2">
-                <div class="border-bottom border-primary  mb-3 d-flex align-items-center justify-content-center">
-                    <h5 class="  title-text d-inline-flex text-nowrap p-2 mb-0 rounded-top " data-aos="fade-right">
-                        {{'FEHome.featured' | translate}}
-                    </h5>
-
-                </div>
+    <div class="bg-white space">
+        <div class="container-main">
+            <div class="container-fluid">
                 <div class="row px-2">
-                    <div class="col-5 col-md-3 col-xl-2dot4 px-2 mb-3" *ngFor="let item of product.featured">
-                        <app-box-product [item]="item"></app-box-product>
-                    </div>
-                </div>
-                <div class="d-flex justify-content-end ">
-                    <button class=" d-inline-flex align-items-center btn bg-white text-black border"
-                        [routerLink]="['/san-pham/noi-bat']">
-                        <span style="font-size: 16px;"> {{'FEHome.more' | translate}}</span>
-                        <i class="fas fa-long-arrow-alt-right ml-2"></i>
-                    </button>
-                </div>
-            </div>
-
-            <div class="py-2">
-                <div class="border-bottom border-primary  mb-3 d-flex align-items-center justify-content-center">
-                    <h5 class=" text-black title-text d-inline-flex text-nowrap p-2 mb-0 rounded-top">
-                        {{'FEHome.hot' | translate}}
-                    </h5>
-
-                </div>
-                <div class="row px-2">
-                    <div class="col-6 col-md-3 col-xl-2dot4 px-2 mb-3" *ngFor="let item of product.hot"
-                        [ngClass]="{'d-none' : item.price == 0}">
-                        <app-box-product [item]="item"></app-box-product>
-                    </div>
-                </div>
-                <div class="d-flex justify-content-end ">
-                    <button class=" d-inline-flex align-items-center btn bg-white text-black border"
-                        [routerLink]="['/san-pham/ban-chay']">
-                        <span style="font-size: 16px;"> {{'FEHome.more' | translate}}</span>
-                        <i class="fas fa-long-arrow-alt-right ml-2"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-<div class="space" style="background-color: #126685ee;">
-    <div class="container-main">
-        <div class="container-fluid">
-            <div class="py-2 d-flex-none justify-content-center">
-                <app-banner class="py-1 d-block"></app-banner>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Tin tức -->
-<div class="bg-white space">
-    <div class="container-main">
-        <div class="container-fluid">
-            <div class="py-2">
-                <div class="row align-items-end">
-                    <div class="col-md-4">
-                        <div class="col-md-12 text-right text-uppercase">
-                            <p class="font-weight-bold">{{'FEHome.news' | translate}}</p>
-                            <h3>{{'FEHome.hotnews' | translate}}</h3>
+                    <div class="col-12 col-md-3 col-xl-2dot3  px-2 mb-3" data-aos="zoom-in-up">
+                        <div class="item text-center pt-3 border">
+                            <div class="icon">
+                                <img src="../../../assets/img/car.webp" alt="" style="max-width:100px; height: 100%;">
+                            </div>
+                            <div class="info">
+                                <h5>Giao Hàng Toàn Quốc</h5>
+                                <p> Miễn phí vận chuyển với các đơn hàng trị giá trên 2.000.000đ</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-8 text-right">
-                        <button class="d-inline-flex align-items-center btn bg-white py-1 px-4 mb-0"
-                            [routerLink]="['/tin-tuc']">
-                            {{'FEHome.more' | translate}}
+                    <div class="col-12 col-md-3 col-xl-2dot3 px-2 mb-3" data-aos="zoom-in-up">
+                        <div class="item text-center pt-2 border">
+                            <div class="icon mb-1">
+                                <img src="../../../assets/img/quality-assurance.png" alt="" style="max-width:20%; height: 100%;">
+                            </div>
+                            <div class="info"> 
+                                <h5>Cam kết yến nguyên chất 100%</h5>
+                                <p> Miễn phí vận chuyển với các đơn hàng trị giá trên 2.000.000đ</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 col-xl-2dot3 px-2 mb-3" data-aos="zoom-in-up">
+                        <div class="item text-center pt-3 border">
+                            <div class="icon mb-1">
+                                <img src="../../../assets/img/24-hours-support.png" alt="" style="max-width:50px; height: 100%;">
+                            </div>
+                            <div class="info ">
+                                <h5>Hỗ trợ online 24/24</h5>
+                                <p> Luôn hỗ trợ khách hàng 24/24 tất cả các ngày trong tuần</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3 col-xl-2dot3  px-2 mb-3" data-aos="zoom-in-up">
+                        <div class="item text-center pt-3 border">
+                            <div class="icon mb-1">
+                                <img src="../../../assets/img/product-return.png" alt="" style="max-width:50px; height: 100%;">
+                            </div>
+                            <div class="info ">
+                                <h5>Đổi Hàng Dễ Dàng</h5>
+                                <p> Miễn phí đổi trả trong vòng 30 ngày đầu tiên cho tất cả các mặt hàng</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <!-- <div class="row  gap-3 ">
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 wrap-content">
+                        <div class="item text-center pt-4">
+                            <div class="icon mb-4">
+                                <img src="../../../assets/img/car.webp" alt="" style="max-width:100px; height: 100%;">
+                            </div>
+                            <div class="info">
+                                <h5>Giao Hàng Toàn Quốc</h5>
+                                <p> Miễn phí vận chuyển với các đơn hàng trị giá trên 2.000.000đ</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 wrap-content">
+                        <div class="item text-center pt-4">
+                            <div class="icon mb-4">
+                                <img src="../../../assets/img/car.webp" alt="" style="max-width:100px; height: 100%;">
+                            </div>
+                            <div class="info">
+                                <h5>Giao Hàng Toàn Quốc</h5>
+                                <p> Miễn phí vận chuyển với các đơn hàng trị giá trên 2.000.000đ</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 wrap-content">
+                        <div class="item text-center pt-4">
+                            <div class="icon mb-4">
+                                <img src="../../../assets/img/car.webp" alt="" style="max-width:100px; height: 100%;">
+                            </div>
+                            <div class="info">
+                                <h5>Giao Hàng Toàn Quốc</h5>
+                                <p> Miễn phí vận chuyển với các đơn hàng trị giá trên 2.000.000đ</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 wrap-content">
+                        <div class="item text-center pt-4">
+                            <div class="icon mb-4">
+                                <img src="../../../assets/img/car.webp" alt="" style="max-width:100px; height: 100%;">
+                            </div>
+                            <div class="info">
+                                <h5>Giao Hàng Toàn Quốc</h5>
+                                <p> Miễn phí vận chuyển với các đơn hàng trị giá trên 2.000.000đ</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Danh sách sản phẩm -->
+    <div class="bg-white space">
+        <div class="container-main">
+            <div class="container-fluid">
+                <div class="py-2">
+                    <div class="border-bottom border-primary  mb-3 d-flex align-items-center justify-content-center">
+                        <h5 class="  title-text d-inline-flex text-nowrap p-2 mb-0 rounded-top " data-aos="fade-down">
+                            {{'FEHome.featured' | translate}}
+                        </h5>
+
+                    </div>
+                    <div class="row px-2">
+                        <div class="col-6 col-md-3 col-xl-2dot4  px-2 mb-3" data-aos="zoom-in-up"
+                            *ngFor="let item of product.featured">
+                            <app-box-product [item]="item"></app-box-product>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-end ">
+                        <button class=" d-inline-flex align-items-center btn bg-white text-black border"
+                            [routerLink]="['/san-pham/noi-bat']">
+                            <span style="font-size: 16px;"> {{'FEHome.more' | translate}}</span>
                             <i class="fas fa-long-arrow-alt-right ml-2"></i>
                         </button>
                     </div>
                 </div>
-                <div class="row mt-3">
-                    <div class="col-md-5 col-lg-3 px-4 px-md-3" *ngFor="let item of news.data">
-                        <app-box-content [item]="item"></app-box-content>
+
+                <div class="py-2">
+                    <div class="border-bottom border-primary  mb-3 d-flex align-items-center justify-content-center">
+                        <h5 class=" text-black title-text d-inline-flex text-nowrap p-2 mb-0 rounded-top">
+                            {{'FEHome.hot' | translate}}
+                        </h5>
+
+                    </div>
+                    <div class="row px-2">
+                        <div class="col-6 col-md-3 col-xl-2dot4 px-2 mb-3" *ngFor="let item of product.hot"
+                            [ngClass]="{'d-none' : item.price == 0}">
+                            <app-box-product [item]="item"></app-box-product>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-end ">
+                        <button class=" d-inline-flex align-items-center btn bg-white text-black border"
+                            [routerLink]="['/san-pham/ban-chay']">
+                            <span style="font-size: 16px;"> {{'FEHome.more' | translate}}</span>
+                            <i class="fas fa-long-arrow-alt-right ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="place about-us position-relative" *ngIf="aboutUs.data.name && aboutUs.data.name.length > 0"
+        style="background-image: url('../../../assets/img/bg-about-us.png');">
+        <div class="overlay"></div>
+
+        <div class="container-main content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="title position-relative pb-4">
+                            <h5 class="  title-text d-inline-flex text-nowrap p-2 mb-0 rounded-top "
+                                data-aos="fade-down">
+                                {{ aboutUs.data.name }}</h5>
+                            <div>{{ aboutUs.data.title }}</div>
+                            <div class="bottom-dots">
+                                <span class="dot line-dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                                <span class="dot"></span>
+                            </div>
+                        </div>
+                        <div [innerHTML]="aboutUs.data.detail | sanitizeHtml" class="truncate-about"></div>
+                        <div class="pt-3 d-md-none">
+                            <img [defaultImage]="aboutUs.data.image" style="max-width: 100%;"
+                                [lazyLoad]="aboutUs.data.image" [title]="aboutUs.data.name" [alt]="aboutUs.data.name">
+                        </div>
+                        <a [routerLink]="[ '/' + aboutUs.data.link ]">
+                            <div
+                                class="view-more mt-md-5 mt-4 text-white d-inline-block text-uppercase position-relative font-weight-bold">
+                                {{ 'FEHome.more' | translate }}
+                                <i class="fas fa-angle-double-right"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 pl-md-0 d-none d-md-block about">
+                        <div class="about-images float-right">
+                            <img class="img-fluid" [defaultImage]="aboutUs.data.image" [lazyLoad]="aboutUs.data.image"
+                                [title]="aboutUs.data.name" [alt]="aboutUs.data.name">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tin tức -->
+    <div class="bg-white space">
+        <div class="container-main">
+            <div class="container-fluid">
+                <div class="py-2">
+                    <div class="row align-items-end">
+                        <div class="col-md-4">
+                            <div class="col-md-12 text-right text-uppercase">
+                                <p class="font-weight-bold">{{'FEHome.news' | translate}}</p>
+                                <h3>{{'FEHome.hotnews' | translate}}</h3>
+                            </div>
+                        </div>
+                        <div class="col-md-8 text-right">
+                            <button class="d-inline-flex align-items-center btn bg-white py-1 px-4 mb-0"
+                                [routerLink]="['/tin-tuc']">
+                                {{'FEHome.more' | translate}}
+                                <i class="fas fa-long-arrow-alt-right ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-5 col-lg-3 px-4 px-md-3" *ngFor="let item of news.data">
+                            <app-box-content [item]="item"></app-box-content>
+                        </div>
                     </div>
                 </div>
             </div>

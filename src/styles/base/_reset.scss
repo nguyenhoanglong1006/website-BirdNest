@@ -6,19 +6,20 @@
 ::after,
 ::before {
     --font-primary: Roboto;
-    --color-primary: #ae2b2f;
+    --color-primary: #ffc45e;
     --color-session: rgb(255, 245, 232);
     --color-secondary: #1eaee2ee;
     --text-gray-700: #323333;
     --color-blue: #2177d2;
     --font-secondary: Merriweather;
     --color-text: #4d5156;
-    --bg-section: #f5f6fa;
+    --bg-section: #3f59c1;
     --gradient-primary: linear-gradient(to left, rgb(255 102 50 / 20%) 0%, var(--color-secondary) 100%);
     --border-color-primary: rgba(229, 231, 235, 1);
-    --wrapper: 1920px;
+    --wrapper: 1270px;
     --color-print: #f40c80 !important;
-    --wrapper: 1240px;
+    --bg-sec: #dfe0e1;
+    // --wrapper: 1240px;
 }
 *,
 *::after,

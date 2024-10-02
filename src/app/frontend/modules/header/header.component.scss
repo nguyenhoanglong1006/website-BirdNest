@@ -21,7 +21,23 @@ $transition: 0.5s;
         transform: translateZ(0);
     }
 }
-
+/* Header default */
+.header-top {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, border-bottom 0.3s ease;
+    background-color: #ffffff;
+   border-bottom:1px solid #FFA823;
+   box-shadow: #FFA823;
+  }
+  
+  /* Header when scrolled */
+  .header-scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #000000; /* Border when scrolled */
+  }
 .btn__group {
     a {
         transition: $transition;
@@ -183,7 +199,6 @@ $transition: 0.5s;
     font-size: 1rem !important;
 }
 
-/* icon menu tien.nv 22/07/2020 */
 
 .nav-open-btn .line {
     display: block;

@@ -14,7 +14,12 @@
             <img class="img-fluid" src="../../assets/img/zalo.png" alt="">
         </a>
     </div>
-
+    <div class="icon-contact text-center text-lg-right">
+        <a class="icon-contact-zalo nav-link p-0" href="{{ 'FEHrefFacebook' | translate }}" target="_blank"
+            *ngIf="('FEHrefFacebook' | translate) !== 'FEHrefFacebook' && ('FEHrefFacebook' | translate) !== ''">
+            <img class="img-fluid" src="../../assets/img/facebook.png" alt="">
+        </a>
+    </div>
     <div id="scroll-top">
         <div class="scroll-top d-flex align-items-center justify-content-center cursor-pointer" (click)="scrollTop()">
             <img src="/assets/img/icon/top.svg" width="12" height="auto" alt="top" />

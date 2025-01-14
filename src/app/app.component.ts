@@ -39,12 +39,9 @@ export class AppComponent implements OnInit {
     }
 
     ngOnInit() {
-  
-
         if (this.isBrowser) {
             this.getCompany();
             let is_admin = (window.location.pathname.split('/')[1] == 'admin' || window.location.pathname.split('/')[1] == 'login') ? true : false;
-            this.getlanguage();
         }
     }
 
@@ -78,9 +75,6 @@ export class AppComponent implements OnInit {
     }
 
     getlanguage(): void {
-
-
-
         this.appService.getListLang().subscribe((resp: any) => {
             if (resp.status == 1) {
                 let data = resp.data;

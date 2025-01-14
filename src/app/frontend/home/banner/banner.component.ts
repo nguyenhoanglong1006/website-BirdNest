@@ -37,7 +37,6 @@ export class BannerComponent implements OnInit {
         this.slideService.getSlide({ type: 2 }).subscribe((resp: any) => {
             if (resp.status == 1) {
                 this.slider = resp.data;
-                console.log(this.slider);
                 
             }
         });

@@ -4,7 +4,6 @@
             .owl-prev,
             .owl-next {
                 opacity: 0.2;
-                margin: 0 4.6875rem !important;
             }
 
             .owl-prev:hover,
@@ -30,30 +29,27 @@
             }
         }
 
-        // .slide-image {
-        //     // min-height: 550px;
-        // }
+        .slide-image {
+            height: 520px;
+      
+        }
 
-        // @media (max-width: 768px) {
-        //     .slide-image {
-        //       min-height: 100%;
-        //     }
-        //   }
+        /* Điều chỉnh chiều cao cho các thiết bị nhỏ hơn */
+        @media (max-width: 768px) {
+            .slide-image {
+                height: 200px; /* Chiều cao cho màn hình nhỏ hơn */
+            }
+        }
     }
+
     .owl-carousel.owl-theme {
-        height: 100%;
-        overflow-y: hidden;
-        position: relative;
-        border-radius: 10px;
+       
+
         .owl-nav {
             width: 100%;
             position: absolute;
             top: 46%;
             transform: translateY(-50%);
-
-            // @include viewport-sm {
-            //     display: none !important;
-            // }
 
             .owl-prev,
             .owl-next {

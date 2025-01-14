@@ -36,44 +36,6 @@ section {
 }
 
 /* CATEGORIES */
-.title-category {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-.list-group {
-    list-style: none;
-    border-bottom-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-}
-
-.category-box:hover {
-    cursor: pointer;
-}
-
-.nav-link {
-    display: block;
-}
-
-.dropdown:hover .dropdown-menu {
-    cursor: pointer;
-    display: block;
-}
-
-.dropdown-menu {
-    position: absolute;
-    top: -42px !important;
-    left: 256px !important;
-    width: 880px;
-    height: 450px;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-
-.text-truncate {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
 
 // Post space
 .space {
@@ -209,16 +171,10 @@ button.bg-light:hover {
 .category {
     font-size: 30px;
     font-weight: bold;
-    border-radius: 5px;
-    padding: 3px;
-    height: 140px;
-    width: 160px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f5ead4;
-    box-shadow: #b3a892;
-    border-color: #f5ead4;
+    background-color: #f7f5f5;
 }
 .wrap-content {
     background-color: #f5f5f5;
@@ -258,8 +214,6 @@ button.bg-light:hover {
     height: 100px;
     cursor: pointer;
     z-index: 200000 !important;
-    -webkit-backface-visibility: hidden;
-    -webkit-transform: translateZ(0);
     -webkit-transition: visibility 0.5s;
     -moz-transition: visibility 0.5s;
     -o-transition: visibility 0.5s;
@@ -564,7 +518,6 @@ button.bg-light:hover {
 .place.about-us {
     position: relative;
     width: 100%;
-  
 }
 
 /* Lớp phủ mờ */
@@ -575,17 +528,21 @@ button.bg-light:hover {
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1; 
+    z-index: 1;
 }
-
 
 .place.about-us .content {
     position: relative;
     z-index: 2;
     color: #ffffff;
-  
-    padding-top: 100px; 
+
+    padding-top: 100px;
 }
 .item {
     border-radius: 15px;
+    background-color: #f1efec;
+    box-shadow: 0px 5px 5px 0px #d9d8d8;
+}
+.box-offer {
+    z-index: 50;
 }

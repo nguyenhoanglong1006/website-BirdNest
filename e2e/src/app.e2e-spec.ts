@@ -143,7 +143,6 @@ describe('Universal', () => {
       expect(await page.appHeroes.isPresent()).toBeTruthy();
       expect(await page.allHeroes.count()).toEqual(9, 'number of heroes');
       const heroesAfter = await toHeroArray(page.allHeroes);
-      // console.log(await Hero.fromLi(page.allHeroes[0]));
       const expectedHeroes =  heroesBefore.filter(h => h.name !== newHeroName);
       expect(heroesAfter).toEqual(expectedHeroes);
       // expect(await page.selectedHeroSubview.isPresent()).toBeFalsy();

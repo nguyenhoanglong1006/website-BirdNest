@@ -53,20 +53,19 @@ export function app() {
     });
     return server;
 }
-
 function run() {
-    const port = 2301;
+    const port =  2301;
     const server = app();
-    const fs = require('fs');
-    const _https = require('https');
-    var httpsOptions = {
-        key: fs.readFileSync('./ssl/ssl.key'),
-        cert: fs.readFileSync('./ssl/ssl-bundle.crt'),
-    };
-    _https.createServer(httpsOptions, server).listen(port, () => {
+    server.listen(port, () => {
         console.log(`Node Express server listening on http://localhost:${port}`);
     });
 }
+// function run() {
+//     const port = 2301;
+//     const server = app();
+//     const _http = require('http');
+
+// }
 // Webpack will replace 'require' with '__webpack_require__'
 // '__non_webpack_require__' is a proxy to Node 'require'
 // The below code is to ensure that the server is run only when not requiring the bundle.

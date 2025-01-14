@@ -34,7 +34,6 @@ export class HeaderComponent implements OnInit {
 
     public refreshed: boolean = true;
 
-    public language;
 
     public user: any = {}
 
@@ -63,19 +62,7 @@ export class HeaderComponent implements OnInit {
     ) {
         if (isPlatformBrowser(this.platformId)) {
             this.width = window.innerWidth;
-            setTimeout(() => {
-                this.language = this.globals.language.get(false);
-                this.mutiLang.data = this.globals.language.getData();
-                if (this.mutiLang.data.length > 0) {
-                    this.mutiLang.data = this.mutiLang.data.filter((item) => {
-                        if (+item.id == +this.language) {
-                            this.mutiLang.active = item;
-                        }
-                        return item.status > 0;
-                    });
-                }
-                this.user = this.globals.CUSTOMERS.get();
-            }, 50);
+            
         }
 
         this.navigationSubs = this.router.events.subscribe((event) => {
@@ -191,19 +178,7 @@ export class HeaderComponent implements OnInit {
             Object.assign({}, { class: 'gray modal-lg search-modal' }),
         );
     }
-    onLanguage = (code, language_id) => {
-        if (code != this.globals.language.getCode()) {
-            window.location.href =
-                window.document.querySelectorAll('link[rel=alternate]')[0]['href'];
-            this.mutiLang.data.filter((item) => {
-                if (+item.id == +language_id) {
-                    this.mutiLang.active = item;
-                }
-                return item;
-            });
-            this.globals.language.set(language_id, false);
-        }
-    };
+ 
 
     onCheckRouter() {
         let link = window.location.pathname;

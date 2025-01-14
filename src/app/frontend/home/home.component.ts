@@ -106,9 +106,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         get: (): void => {
             this.homeService.getNews().subscribe((resp: any) => {
                 if (resp.status == 1) {
-                    this.news.data = resp.data;
-                    console.log( this.news.data);
-                    
+                    this.news.data = resp.data;                    
                 }
             });
         },
@@ -118,9 +116,7 @@ export class HomeComponent implements OnInit, OnDestroy {
         get: (): void => {
             this.homeService.getNewsDidPin().subscribe((resp: any) => {
                 if (resp.status == 1) {
-                    this.news.data = resp.data;
-                    console.log( this.news.data);
-                    
+                    this.news.data = resp.data;                    
                 }
             });
         },

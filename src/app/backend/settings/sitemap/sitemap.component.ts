@@ -11,7 +11,6 @@ import { tryCatch } from 'rxjs/internal-compatibility';
 export class SitemapComponent implements OnInit, OnDestroy {
     displayViButton = false;
     displayEnButton = false
-    private languageKey = 'localStorageLanguage';
     private connect;
     private conf = {
         createPage: {
@@ -84,25 +83,6 @@ export class SitemapComponent implements OnInit, OnDestroy {
 
     ngOnInit(): void {
         this.globals.send({ path: this.conf.getListOther.path, token: this.conf.getListOther.token, params: { group: 3 } });
-
-        const localLanguage = localStorage.getItem('localStoragelanguage');
-        
-        if (localLanguage) {
-            try {
-                const languageObj = JSON.parse(localLanguage);
-
-                if (languageObj.length > 0) { 
-                    languageObj.map((lang: any) => {
-                        console.log(lang)
-                        if (lang?.code === 'vn') this.displayViButton = true;
-                        if (lang?.code === 'en' ) this.displayEnButton = true;
-                    })
-                }
-                
-            } catch (error) {
-                // console.log(error);
-            }
-        }
         
     }
 

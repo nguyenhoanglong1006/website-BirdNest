@@ -71,13 +71,11 @@ export class ListProductComponent implements OnInit {
             switch (res.token) {
                 case "getProduct":
                     this.data = []; this.count = -1
-                    console.log("🚀 ~ file: list.component.ts:74 ~ ListProductComponent ~ this.connect=this.globals.result.subscribe ~ this.count:", this.count)
                     if (res.data.length > 0) {
                         this.data = res.data.filter((o) => o.price_actual = +o.price_sale && +o.price_sale > 0 ? +o.price_sale : +o.price);
                     }
                     this.show = this.data && this.data.length > 0 ? 1 : 0;
                     this.count = this.data && this.data.length > 0 ? this.data.length : 0;
-                    console.log("🚀 ~ file: list.component.ts:79 ~ ListProductComponent ~ this.connect=this.globals.result.subscribe ~ this.count:", this.count)
                     this.cwstable._concat(this.data, true);
                     this.extract();
                     setTimeout(() => {

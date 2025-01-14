@@ -7,7 +7,11 @@
     overflow: hidden;
     margin-bottom: 20px;
     height: 341px;
-    background-color: white;
+    background-color: #fbfafa;
+    border-radius: 8px;
+    // box-shadow: -5px 3px 9px 3px  #f3f3f3;
+    border-color: #f8f7f7;
+    border: 1px solid #f3f3f3;
 }
 
 .box-content:hover {
